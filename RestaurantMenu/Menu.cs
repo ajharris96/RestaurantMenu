@@ -33,14 +33,16 @@ namespace RestaurantMenu
 
             LatestItem = menuItem;
 
-            
-            menuItem.Added = DateTime.Now;
             LastUpdated = DateTime.Now;
         }
 
         public void RemoveItem(MenuItem menuItem)
         {
             MenuItems.Remove(menuItem);
+            if (menuItem.Equals(LatestItem))
+            {
+                LatestItem = MenuItems[MenuItems.Count - 1];
+            }
 
         }
 
@@ -55,7 +57,7 @@ namespace RestaurantMenu
 
                 if (item.Equals(LatestItem))
                 {
-                 str +="Newest Item!";
+                 str +=" | Newest Item!";
                 }
                 str += "\n";
 

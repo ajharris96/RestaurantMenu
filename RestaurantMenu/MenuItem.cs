@@ -7,7 +7,7 @@ namespace RestaurantMenu
         public double Price { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
-        public DateTime Added;
+        
         
 
         public MenuItem(double price, string description, string category)
@@ -22,7 +22,7 @@ namespace RestaurantMenu
 
         public override string ToString()
         {
-            string str = Description + ": $" + Price + " | " + Category + " | ";
+            string str = Description + ": $" + Price + " | " + Category;
             return str;
         }
 

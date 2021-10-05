@@ -32,6 +32,9 @@ namespace RestaurantMenu
 
             monica.AddItem(iceCream);
             monica.AddItem(coffee2);
+            monica.AddItem(chicken);
+            monica.RemoveItem(chicken);
+            Console.WriteLine(Environment.NewLine);
 
             Console.WriteLine(monica.ToString());
 
